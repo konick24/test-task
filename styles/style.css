@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.container {
+  margin: 0 20px;
+
+  @media (min-width: 768px) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: 1920px) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.button {
+  padding: 10px 15px;
+  min-width: 85px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  color: #222222;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.page-header {
+  background-color: #222222;
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+.logo__pic {
+  display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  left: 0;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    position: static;
+    width: 460px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 480px;
+  }
+}
+
+.nav__button {
+  padding: 16px;
+  position: absolute;
+  top: -50px;
+  right: 17px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 4px;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+}
+
+.nav__button--opened::before {
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+
+.baner__container {
+  margin: 0;
+  padding: 27px 20px;
+  background-color: #222222;
+}
+
+.baner__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.baner__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.features-list__item {
+  min-height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/check-mark.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.features-list__text {
+  padding-left: 25px;
+  background-color: #282828;
+}
+
+.buner__button {
+  margin-top: 12px;
+}
+
+.advantages__container {
+  padding: 7px 0 27px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__item {
+  position: relative;
+  padding: 20px 33px 20px 39px;
+  display: flex;
+  align-items: center;
+  min-height: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    margin-left: 0;
+    width: 29px;
+    height: 23px;
+    background-image: url("../images/exclude.svg");
+    background-size: 29px 23px;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.advantages__item:not(:last-child) {
+  border-bottom: 1px solid #55565a;
+}
+
+.advantages__button {
+  margin-top: 20px;
+  width: 100%;
+}
