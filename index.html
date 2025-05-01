@@ -77,61 +77,90 @@
       </div>
     </section>
     <section class="page-main__section consultation">
-      <h2 class="consultation__title">Отправь заявку на консультацию</h2>
-      <form class="consultation__form">
-        <input class="consultation__input" type="text" name="Name" placholder="Name" required>
-        <input class="consultation__input" type="email" name="email" placeholder="E-mail" required>
-        <input class="consultation__checkbox" type="checkbox" name="privacy-policy">
-        <span class="consultation__text">I accept Privacy policy</span>
-        <button class="consultation__button button" type="submit"></button>
-      </form>
+      <div class="consultation__container container">
+        <div class="consultation__content">
+          <h2 class="consultation__title">Отправь заявку на консультацию</h2>
+          <form class="consultation__form" method="post" action="#">
+            <label class="consultation__field">
+              <span class="visually-hidden">Name</span>
+              <input class="consultation__input" type="text" name="Name" placeholder="Name" required>
+            </label>
+            <label class="consultation__field">
+              <span class="visually-hidden">E-mail</span>
+              <input class="consultation__input" type="email" name="E-mail" placeholder="E-mail" autocomplete="off" required>
+            </label>
+            <div class="consultation__agreements agreements">
+              <label class="agreements__field">
+                <input class="agreements__checkbox" type="checkbox" name="privacy-policy">
+                <span class="agreements__text">I accept Privacy policy</span>
+              </label>
+            </div>
+            <button class="consultation__button button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
     <section class="page-footer__section footer-nav">
-      <h2 class="visually-hidden">Навигация</h2>
-      <ul class="footer-nav__list">
-        <li class="footer-nav__item">
-          Элемент подвала 1
-        </li>
-        <li class="footer-nav__item">
-          Элемент подвала 2
-        </li>
-        <li class="footer-nav__item">
-          Элемент подвала 3
-        </li>
-      </ul>
+      <div class="footer-nav__container container">
+        <h2 class="visually-hidden">Навигация</h2>
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            Элемент подвала 1
+          </li>
+          <li class="footer-nav__item">
+            Элемент подвала 2
+          </li>
+          <li class="footer-nav__item">
+            Элемент подвала 3
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="page-footer__section social">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <a class="social__link" href="#">
-        <span class="visually-hidden">Логотип сайта</span>
-      </a>
-      <a class="social__copyright copyright" href="#">
-        <span class="copyright__text">© 2024, Copyright.</span>
-      </a>
-      <ul class="social__list">
-        <li class="social__item">
-          <span class="visually-hidden">Инстаграм</span>
-        </li>
-        <li class="social__item">
-          <span class="visually-hidden">Тик-Ток</span>
-        </li>
-        <li class="social__item">
-          <span class="visually-hidden">In</span>
-        </li>
-        <li class="social__item">
-          <span class="visually-hidden">Facebook</span>
-        </li>
-        <li class="social__item">
-          <span class="visually-hidden">YouTube</span>
-        </li>
-      </ul>
-      <a class="social__link" href="#">Privacy policy</a>
-      <a class="social__button button" href="#">Кнопка заказа</a>
-      <a class="social__link" href="#">Terms of Use</a>
+      <div class="social__container container">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <a class="social__logo-link" href="#">
+          <span class="visually-hidden">Логотип сайта</span>
+        </a>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--tik-tok" href="#">
+              <span class="visually-hidden">Тик-Ток</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--in" href="#">
+              <span class="visually-hidden">In</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#">
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </li>
+        </ul>
+        <a class="social__button button" href="#">Кнопка заказа</a>
+        <div class="social__copyright copyright">
+          <span class="copyright__text">© 2024, Copyright.</span>
+          <a class="copyright__text-link" href="#">Privacy policy</a>
+          <a class="copyright__text-link" href="#">Terms of Use</a>
+        </div>
+      </div>
     </section>
   </footer>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
