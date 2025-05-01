@@ -80,14 +80,14 @@
       <div class="consultation__container container">
         <div class="consultation__content">
           <h2 class="consultation__title">Отправь заявку на консультацию</h2>
-          <form class="consultation__form">
+          <form class="consultation__form" method="post" action="#">
             <label class="consultation__field">
               <span class="visually-hidden">Name</span>
               <input class="consultation__input" type="text" name="Name" placeholder="Name" required>
             </label>
             <label class="consultation__field">
               <span class="visually-hidden">E-mail</span>
-              <input class="consultation__input" type="email" name="E-mail" placeholder="E-mail" required>
+              <input class="consultation__input" type="email" name="E-mail" placeholder="E-mail" autocomplete="off" required>
             </label>
             <div class="consultation__agreements agreements">
               <label class="agreements__field">
@@ -160,6 +160,7 @@
       </div>
     </section>
   </footer>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
