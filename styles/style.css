@@ -25,7 +25,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
-  background-color: #333333;
+  background-color: #222222;
 
   @media (min-width: 768px) {
     font-size: 24px;
@@ -41,6 +41,10 @@ body {
   }
 
   @media (min-width: 1220px) {
+    margin: 0 63px;
+  }
+
+  @media (min-width: 1920px) {
     margin: 0 auto;
     width: 1220px;
   }
@@ -75,6 +79,8 @@ body {
   }
 
   @media (min-width: 768px) {
+    padding: 15px 25px;
+    min-width: 120px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -90,10 +96,18 @@ body {
     right: 0;
     z-index: 1;
   }
+
+  @media (min-width: 1220px) {
+    width: 732px;
+  }
 }
 
 .page-header--scrolled {
   opacity: 0.6;
+
+  @media (min-width: 1220px) {
+    width: 100%;
+  }
 }
 
 .page-header__container {
@@ -105,6 +119,10 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+
+  /* @media (min-width: 1220px) {
+    width: 732px;
+  } */
 }
 
 .logo__pic {
@@ -283,15 +301,44 @@ body {
 }
 
 .baner {
+  background: linear-gradient(to bottom, #222222 0, #9a3e09 30% 70%, #222222 100%);
+
   @media (min-width: 768px) {
-    margin-top: 88px;
+    padding-top: 88px;
+    background:
+      linear-gradient(to bottom, #222222 13%, #9a3e09 30% 70%, #222222 100%);
+  }
+
+  @media (min-width: 1220px) {
+    position: relative;
   }
 }
 
 .baner__container {
-  margin: 0;
+  margin: 0 auto;
   padding: 27px 20px;
-  background: linear-gradient(to bottom, #222222 0, #9a3e09 30% 70%, #333333 100%);
+
+  @media (min-width: 768px) {
+    padding: 27px 30px;
+  }
+
+  @media (min-width: 1220px) {
+    padding: 27px 63px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 638px;
+      background-image:
+      url("../images/pizza.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: auto 100%;
+    }
+  }
 }
 
 .baner__title {
@@ -370,8 +417,31 @@ body {
   }
 }
 
+.advantages {
+  @media (min-width: 1220px) {
+    position: relative;
+  }
+}
+
 .advantages__container {
   padding: 7px 0 27px;
+  /* position: relative; */
+
+  @media (min-width: 1220px) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 622px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-image: url("../images/hall.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+      background-size: auto 100%;
+    }
+
+  }
 }
 
 .advantages__list {
@@ -380,6 +450,10 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 1220px) {
+    padding-left: 622px;
+  }
 }
 
 .advantages__item {
@@ -416,7 +490,7 @@ body {
 }
 
 .consultation {
-  background: linear-gradient(to bottom, #333333 0, #9a3e09 30% 70%, #333333 100%);
+  background: linear-gradient(to bottom, #222222 0, #9a3e09 30% 70%, #222222 100%);
 }
 
 .consultation__container {
